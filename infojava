@@ -1,0 +1,110 @@
+package com.tom;
+public class Info {
+String name;
+String tel;
+String address;
+String sex;
+String com;
+String errorname;
+String errortel;
+String erroraddress;
+String errorsex;
+String errorcom;
+public Info(String name, String tel, String address, String sex, String com) {
+super();
+this.name = name;
+this.tel = tel;
+this.address = address;
+this.sex = sex;
+this.com = com;
+}
+public String getName() {
+return name;
+}
+public void setName(String name) {
+this.name = name;
+}
+public String getTel() {
+return tel;
+}
+public void setTel(String tel) {
+this.tel = tel;
+}
+public String getAddress() {
+return address;
+}
+public void setAddress(String address) {
+this.address = address;
+}
+public String getSex() {
+return sex;
+}
+public void setSex(String sex) {
+this.sex = sex;
+}
+public String getCom() {
+return com;
+}
+public void setCom(String com) {
+this.com = com;
+}
+public boolean validate() {
+boolean error = false;
+if (name!=null){
+errorname = "必填";
+error = true;
+}
+if (tel!=null){
+errortel = "請輸入電話為必填";
+error = true;
+}
+if (sex!=null){
+errorsex = "性別資料為必填";
+error = true;
+}
+if (address!=null){
+erroraddress = "為必填";
+error = true;
+}
+if(com!=null){
+errorcom="必填";
+error=true;
+
+}
+if (error){
+return false; 
+}else{
+return true;
+}
+}
+public String getErrorname() {
+return errorname;
+}
+public void setErrorname(String errorname) {
+this.errorname = errorname;
+}
+public String getErrortel() {
+return errortel;
+}
+public void setErrortel(String errortel) {
+this.errortel = errortel;
+}
+public String getErroraddress() {
+return erroraddress;
+}
+public void setErroraddress(String erroraddress) {
+this.erroraddress = erroraddress;
+}
+public String getErrorsex() {
+return errorsex;
+}
+public void setErrorsex(String errorsex) {
+this.errorsex = errorsex;
+}
+public String getErrorcom() {
+return errorcom;
+}
+public void setErrorcom(String errorcom) {
+this.errorcom = errorcom;
+}
+}
